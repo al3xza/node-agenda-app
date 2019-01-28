@@ -85,6 +85,14 @@ function doSearch(){
     var value = this.value
 console.warn('to do search', value);
 
+var filteredContacts = globalContacts.filter(function(contact){
+    console.info(contact.firstName, value);
+    return contact.firstName == value;
+
+});
+//filteredContacts.push(globalContacts[0]);
+displayContacts(filteredContacts);
+
 }
 
 loadContacts();
