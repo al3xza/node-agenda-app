@@ -82,12 +82,11 @@ function initEvents() {
 // - start app
 
 function doSearch(){
-    var value = this.value
-console.warn('to do search', value);
+    var value = this.value.toLowerCase();
 
 var filteredContacts = globalContacts.filter(function(contact){
-    console.info(contact.firstName, value);
-    return contact.firstName == value;
+    console.log(contact.firstName, value);
+    return contact.firstName.toLowerCase().includes(value) || contact.lastName.toLowerCase().includes(value) || contact.phone.toLowerCase().includes(value);
 
 });
 //filteredContacts.push(globalContacts[0]);
