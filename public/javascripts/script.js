@@ -11,7 +11,7 @@ function displayContacts(contacts){
         <td>${contact.firstName}</td>
         <td>${contact.lastName}</td>
         <td>${contact.phoneNumber}</td>
-        <td><a href="contacts.json?delete=${contact.phoneNumber}">X</a></td>
+        <td><a href="contacts/delete?phone=${contact.phoneNumber}">X</a></td>
         </tr>`;
     });
     console.warn(rows);
