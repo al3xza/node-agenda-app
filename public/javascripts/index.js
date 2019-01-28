@@ -17,7 +17,7 @@ function getNewRow() {
         </tr>`;
 }
 
-function saveContact() {
+function saveContact() {ndex.js
     var firstName = document.querySelector('input[name=firstName]').value;
     var lastName = $('input[name=lastName]').val();
     var phone = $('input[name=phone]').val();
@@ -71,14 +71,21 @@ function initEvents() {
             return contact.phone == phoneToEdit;
         });
         console.log('edit', phoneToEdit, contact);
-        
         document.querySelector('input[name=firstName]').value = contact.firstName;
         $('input[name=lastName]').val(contact.lastName);
         $('input[name=phone]').val(contact.phone);
     });
+
+    document.getElementById("search").addEventListener("input", doSearch);
 }
 
 // - start app
+
+function doSearch(){
+    var value = this.value
+console.warn('to do search', value);
+
+}
 
 loadContacts();
 initEvents();
