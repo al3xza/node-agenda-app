@@ -1,16 +1,16 @@
-# agenda app 
+# Agenda APP
 
 A simple app using node & express for managing phone books
 
-## setup
+## Setup
 
 ```
-git clone
-cd 
+git clone git@github.com:nmatei/node-agenda-web3.git
+cd node-agenda-web3
 npm install
 ```
 
-## running the app 
+## Running app
 
 ```
 npm run devstart
