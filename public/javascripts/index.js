@@ -1,7 +1,7 @@
 var phoneToEdit = '';
 
 function loadContacts() {
-    $.ajax('data/contacts.json').done(function(contacts){
+    $.ajax('contacts').done(function(contacts){
         console.info('contacts loaded', contacts);
         window.globalContacts = contacts;
         displayContacts(contacts);
@@ -17,7 +17,7 @@ function getNewRow() {
         </tr>`;
 }
 
-function saveContact() {ndex.js
+function saveContact() {
     var firstName = document.querySelector('input[name=firstName]').value;
     var lastName = $('input[name=lastName]').val();
     var phone = $('input[name=phone]').val();
